@@ -1,4 +1,4 @@
-# CodEditor App
+# CodEdit App
 > Live demo [_here_](). 
 
 ## Table of Contents
@@ -13,7 +13,7 @@
 <!-- * [License](#license) -->
 
 ## General Information
-- CodEditor is an online compiler.
+- CodEdit is an online compiler.
 
 
 ## Technologies Used
