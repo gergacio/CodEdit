@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/run', async(req, res) => {
-    const { language = "js", code } = req.body;
+    const { language = "cpp", code } = req.body;
 
     if(code === undefined) {
         return res.status(400).json({success: false, error:"empty code body"})
