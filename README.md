@@ -1,4 +1,4 @@
-# The Seeker App
+# CodEditor App
 > Live demo [_here_](). 
 
 ## Table of Contents
