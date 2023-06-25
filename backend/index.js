@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const {generateFile} = require(`./genarateFile`);
 const {executeCpp} = require(`./executeCpp`);
 
@@ -6,13 +7,9 @@ var port = process.env.PORT || 5005;
 
 const app = express();
 
-
-
-app.use(express.json());
-
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-
-
+app.use(express.json());
 
 app.get('/', (req, res) => {
     return res.json({"hello": "world"});
