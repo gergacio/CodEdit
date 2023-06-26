@@ -39,6 +39,7 @@ function App() {
       >
         <option value="cpp">C++</option>
         <option value="py">Python</option>
+        <option value="js">JavaScript</option>
       
       </select>
      </div>

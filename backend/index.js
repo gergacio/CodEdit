@@ -3,6 +3,7 @@ const cors = require('cors');
 const {generateFile} = require(`./genarateFile`);
 const {executeCpp} = require(`./executeCpp`);
 const { executePy } = require("./executePy");
+const { executeJs } = require("./executeJs");
 
 var port = process.env.PORT || 5005;
 
@@ -28,8 +29,10 @@ app.post('/run', async(req, res) => {
         let output;
         if(language == "cpp"){
              output = await executeCpp(filepath);
-        }else{
+        }else if(language == "py"){
             output = await executePy(filepath);
+        }else {
+            output = await executeJs(filepath);
         }
       
         return res.json({filepath, output});
