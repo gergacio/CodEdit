@@ -19,8 +19,14 @@ function App() {
     try{
       const { data } = await axios.post("http://localhost:5005/run", payload)
       setOutput(data.output);
-    }catch(err){
-      console.log(err.response);
+    }catch({response}){
+      if(response){
+        const errMsg = response.data.err.stderr;
+        setOutput(errMsg);
+      }else{
+        setOutput("Error connecting to server!");
+      }
+     
     }
 
     
