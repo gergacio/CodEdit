@@ -1,1 +1,0 @@
-console.log('hi, ola, herete, zdravej, здравей')

@@ -7,7 +7,7 @@ const {executeCpp} = require(`./executeCpp`);
 const { executePy } = require("./executePy");
 const { executeJs } = require("./executeJs");
 const Job = require("./models/Job");
-const { json } = require("express");
+
 
 mongoose.connect("mongodb://localhost/compilerapp", {
     useNewUrlParser: true,
@@ -127,8 +127,10 @@ app.listen(port, () => {
 
 // import time 
 
-// for i in Range(1, 6)
-//     time.sleep(i)
-//     print(i)
+// from time import sleep
+
+// for i in (1,6):
+//   print(i)
+//   sleep(i)
 
 // --------------------------------------------
