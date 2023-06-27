@@ -25,6 +25,13 @@
 - macOS - v12.6
 
 ## Features
+- c++ compiler
+- python compiler
+- javaScript compiler
+- polling on frontend
+- queue driven system
+- starter code for a language
+- default language 
 
 
 ## Screenshots
