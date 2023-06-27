@@ -3,9 +3,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const {generateFile} = require(`./genarateFile`);
-const {executeCpp} = require(`./executeCpp`);
-const { executePy } = require("./executePy");
-const { executeJs } = require("./executeJs");
+
+const { addJobToQueue } = require("./jobQueue");
 const Job = require("./models/Job");
 
 
@@ -65,6 +64,7 @@ app.post('/run', async(req, res) => {
         //run the file and send the response
         job = await new Job({language, filepath}).save();
         const jobId = job["_id"];
+        addJobToQueue(jobId);
         console.log(job);
 
         res.status(201).json({success: true, jobId})
@@ -72,32 +72,9 @@ app.post('/run', async(req, res) => {
 
         let output;
 
-        job['startedAt'] = new Date();
-
-        if(language == "cpp"){
-             output = await executeCpp(filepath);
-        }else if(language == "py"){
-            output = await executePy(filepath);
-        }else {
-            output = await executeJs(filepath);
-        }
-
-        job["completedAt"] = new Date();
-        job["status"] = "success";
-        job["output"] = output;
-
-        await job.save();
-        console.log(job);
-      
-        // return res.json({filepath, output});
     }
     catch (err){
-        job['completedAt'] = new Date();
-        job['status'] = "error";
-        job['output'] = JSON.stringify(err);//err could be complicated object
-        await job.save();
-        console.log(job);
-        // res.status(500).json({err});
+       return res.status(500).json({success: false, err: JSON.stringify(err)} )
     }
  
 })
