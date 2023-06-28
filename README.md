@@ -38,7 +38,7 @@
 
 
 ## Screenshots
-![Example screenshot](./screenshots/codedit.png)
+![Example screenshot](./screenshots/codEdit.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
@@ -63,15 +63,15 @@
 - Type the cmd npm run dev (yarn run dev) to start up the srever for the application. If successful you will see server start on port 5005 /
 Connected successfully to mongodb displayed int the terminal. 
 - Navigate the directory where you have cloned the repository. Type cd client into terminal to navigate to the client directory.
-- Type the cmd npm start (yarn start) to start up client. ( http://localhost:3000).
+- Type the cmd npm start (yarn start) to start up client.
 
 
 
 ## Usage
 <!-- How does one go about using it? -->
-- Check out your favorite programming language ( c++ | python | javascript )
+- Check out your favorite programming language. ( c++ | python | javascript )
 - Use the terminal to write your amazing code.
-- Set up default language.
+- Set up your favorite language.
 
 
 ## Project Status
