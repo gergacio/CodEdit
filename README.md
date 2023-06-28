@@ -69,6 +69,9 @@ Connected successfully to mongodb displayed int the terminal.
 
 ## Usage
 <!-- How does one go about using it? -->
+- Check out your favorite programming language ( c++ | python | javascript )
+- Use the terminal to write your amazing code.
+- Set up default language.
 
 
 ## Project Status
