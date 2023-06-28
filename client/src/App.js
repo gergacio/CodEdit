@@ -109,8 +109,8 @@ function App() {
 
   return (
     <div>
-     <p><span class="logo">CodEdit</span></p>
-     <h1>Online Compiler</h1>
+     <p><span class="logo">G|G|G</span></p>
+     <h1>CodEdit.</h1>
      <div className='editor'>
       <div>
       <label>Language: </label>
