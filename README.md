@@ -17,14 +17,14 @@
 
 
 ## Technologies Used
-- MongoDB - v
+- MongoDB - v6
 - Mongoose - v7
 - Redis - v7
 - Bull - v4
 - Express.js - v4
 - Node.js - v19
 - React - v18
-- Visual Studio Code - v1.71.2
+- VS Code - v1.71.2
 - macOS - v12.6
 
 ## Features
@@ -38,7 +38,7 @@
 
 
 ## Screenshots
-<!-- ![Example screenshot](./screenshots/) -->
+![Example screenshot](./screenshots/codedit.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 

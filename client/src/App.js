@@ -104,16 +104,15 @@ function App() {
       }else{
         setOutput("Error connecting to server!");
       }
-     
-    }
-
-    
+    }   
   }
 
   return (
-    <div className="App">
+    <div>
+     <p><span class="logo">CodEdit</span></p>
      <h1>Online Compiler</h1>
-     <div>
+     <div className='editor'>
+      <div>
       <label>Language: </label>
       <select 
       value={language}
@@ -131,18 +130,20 @@ function App() {
         <option value="js">JavaScript</option>
       
       </select>
-     </div>
-   <br />
-   <div>
-    <button onClick={setDefaultLanguage}>Set Default</button>
-   </div>
-     <textarea rows="20" cols="75" value={code} onChange={(e) => {setCode(e.target.value)}}></textarea>
+      <span> <button onClick={setDefaultLanguage}> Set Default </button></span>
+      </div>    
+     <br/>
+     <textarea rows="20" cols="100" value={code} onChange={(e) => {setCode(e.target.value)}}></textarea>
      <br />
      <button onClick={handleSubmit}>Submit</button>
-     <p>{status}</p>
-     <p>{jobId && `JobId: ${jobId}`}</p>
+     <br/>
+     <p>Current Status: {status}</p>
      <p>{renderTimeDetails()}</p>
-     <p>{output}</p>
+     <br/>
+     <hr></hr>
+     <p>Output</p>
+      <p> {jobId && `${jobId}`}</p>
+    </div>
     </div>
   );
 }
