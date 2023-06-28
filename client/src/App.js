@@ -36,12 +36,12 @@ function App() {
     let { submittedAt, startedAt, completedAt } = jobDetails;
     let result = "";
     submittedAt = moment(submittedAt).toString();
-    result += `Job Submitted At: ${submittedAt}  `;
+    result += `  Submitted At: ${submittedAt}  `;
     if (!startedAt || !completedAt) return result;
     const start = moment(startedAt);
     const end = moment(completedAt);
     const diff = end.diff(start, "seconds", true);
-    result += `Execution Time: ${diff}s`;
+    result += ` |  Execution Time: ${diff}s`;
     return result;
   }
 
@@ -137,10 +137,11 @@ function App() {
      <br />
      <button onClick={handleSubmit}>Submit</button>
      <br/>
-     <p>Current Status: {status}</p>
-     <p>{renderTimeDetails()}</p>
      <br/>
-     <hr></hr>
+     <label>Submission Details</label>
+     <p>Current Status: {status} | {renderTimeDetails()}</p>
+     <br/>
+
      <p>Output</p>
       <p> {jobId && `${jobId}`}</p>
     </div>
