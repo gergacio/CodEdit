@@ -20,6 +20,7 @@ body {
   margin: 0;
   font-family: var(--sans);
   background-color: whitesmoke;
+  color: var(--black);
 
   font-size: var(--font-size);
   z-index: 3;
@@ -36,9 +37,9 @@ h1 {
   padding: .5rem;
 }
 .editor {
-  border: 1px solid black;
+
   padding: 2rem;
-  background-color: black;
+  background-color: var(--black);
   color: white;
 }
 

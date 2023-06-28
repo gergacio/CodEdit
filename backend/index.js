@@ -84,30 +84,3 @@ app.listen(port, () => {
 });
 
 
-
-// code snippet
-
-// --------------------------------------------
-//  c++
-
-// #include <iostream>
-// using namespace std;
-
-// int main() {
-//   cout << "Hello World!";
-//   return 0;
-// }
-
-// --------------------------------------------
-// py
-
-
-// import time 
-
-// from time import sleep
-
-// for i in (1,6):
-//   print(i)
-//   sleep(i)
-
-// --------------------------------------------
