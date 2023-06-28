@@ -38,7 +38,7 @@
 
 
 ## Screenshots
-![Example screenshot](./screenshots/codEdit.png)
+![Example screenshot](./screenshots/codedit.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
